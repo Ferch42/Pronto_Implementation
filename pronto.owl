@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/direito_computavel/Pronto#"
+     xml:base="http://www.semanticweb.org/direito_computavel/Pronto"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pwo="http://purl.org/spar/pwo/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:allot="http://akn.web.cs.unibo.it/allot/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#"
+     xmlns:lkif-action="http://www.estrellaproject.org/lkif-core/action.owl#"
+     xmlns:lkif-expression="http://www.estrellaproject.org/lkif-core/expression.owl#"
+     xmlns:lkif-legal-action="http://www.estrellaproject.org/lkif-core/legal-action.owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/direito_computavel/Pronto">
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/akn/ontology/allot/2017-04-21"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/pwo/produces -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/spar/pwo/produces">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/pwo/needs -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/pwo/needs">
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#concernedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#concernedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#relatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/akn/ontology/allot/hasRealization -->
+
+    <rdf:Description rdf:about="https://w3id.org/akn/ontology/allot/hasRealization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#DataVersion"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#encrypted -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#encrypted">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#originType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#originType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#pseudonymized -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#pseudonymized">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person"/>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#AnonymousData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#AnonymousData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#NonPersonalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#BiometricData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#BiometricData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#Data">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#DataVersion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#DataVersion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#Document">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#EthnicData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#EthnicData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#GeneticData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#GeneticData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#HealthData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#HealthData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#InformationObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#InformationObject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/FRBRWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#Judicial_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#Judicial_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#PersonalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#LegalPersonData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#LegalPersonData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#NonPersonalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#NonPersonalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#NonPersonalData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#OpionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#OpionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#PersonalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#PersonalData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#PersonalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#SexualData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#SexualData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/direito_computavel/Pronto#SensitiveData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/direito_computavel/Pronto#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/direito_computavel/Pronto#Step"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
